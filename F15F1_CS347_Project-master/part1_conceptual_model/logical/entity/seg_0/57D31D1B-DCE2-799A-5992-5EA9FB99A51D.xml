@@ -1,0 +1,29 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="57D31D1B-DCE2-799A-5992-5EA9FB99A51D" name="F15.F1_Lab_Employee">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-25 20:52:49 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>2BAFF446-3C5F-B203-83EA-0883C380BEBB</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="lab_id" id="43A6CE15-5B17-14C9-0995-EAA52D2A401E">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-25 21:24:31 UTC</createdTime>
+<generatorID>7C1BCE4A-97CD-74AA-6BE0-1BC13B1B6DB6</generatorID>
+<ownerDesignName>logical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>6B1A1C0D-E041-EDB0-BCDA-5B89B974277A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

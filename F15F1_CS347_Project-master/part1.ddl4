@@ -1,0 +1,274 @@
+DROP VIEW F15F1_emp_view;
+DROP VIEW F15F1_lab_director_view;
+DROP VIEW F15F1_chair_person_view;
+DROP VIEW F15F1_executive_director_view;
+DROP VIEW F15F1_admin_view;
+
+CREATE VIEW F15F1_emp_view AS
+SELECT
+  emp_id,
+  active,
+  name,
+  email,
+  office,
+  phone_number,
+  status_eff_date,
+  auth,
+  F15F1_Lab_lab_id
+FROM F15F1_emp WHERE
+  executive_director = 'N' AND
+  admin = 'N' AND
+  chair_person = 'N' AND
+  lab_director = 'N';
+  
+CREATE OR REPLACE TRIGGER F15F1_emp_trigger INSTEAD OF
+  INSERT ON F15F1_emp_view
+  FOR EACH ROW
+BEGIN
+  INSERT INTO F15F1_emp (
+    emp_id,
+    active,
+    name,
+    email,
+    office,
+    phone_number,
+    status_eff_date,
+    auth,
+    executive_director, 
+    admin,
+    chair_person,
+    lab_director,
+    F15F1_Lab_lab_id )
+  VALUES (
+    :NEW.emp_id,
+    :NEW.active,
+    :NEW.name,
+    :NEW.email,
+    :NEW.office,
+    :NEW.phone_number,
+    :NEW.status_eff_date,
+    :NEW.auth,
+    'N', 
+    'N',
+    'N',
+    'N',
+    :NEW.F15F1_Lab_lab_id);
+END;
+/   
+
+    
+CREATE VIEW F15F1_executive_director_view AS
+SELECT
+  emp_id,
+  active,
+  name,
+  email,
+  office,
+  phone_number,
+  status_eff_date,
+  auth,
+  F15F1_Lab_lab_id
+FROM F15F1_emp WHERE
+  executive_director = 'Y' AND
+  admin = 'N' AND
+  chair_person = 'N' AND
+  lab_director = 'N';
+  
+CREATE OR REPLACE TRIGGER F15F1_exec_dir_trigger INSTEAD OF
+  INSERT ON F15F1_executive_director_view
+  FOR EACH ROW
+BEGIN
+  INSERT INTO F15F1_emp (
+    emp_id,
+    active,
+    name,
+    email,
+    office,
+    phone_number,
+    status_eff_date,
+    auth,
+    executive_director, 
+    admin,
+    chair_person,
+    lab_director,
+    F15F1_Lab_lab_id )
+  VALUES (
+    :NEW.emp_id,
+    :NEW.active,
+    :NEW.name,
+    :NEW.email,
+    :NEW.office,
+    :NEW.phone_number,
+    :NEW.status_eff_date,
+    :NEW.auth,
+    'Y', 
+    'N',
+    'N',
+    'N',
+    :NEW.F15F1_Lab_lab_id);
+END;
+/
+ CREATE VIEW F15F1_admin_view AS
+SELECT
+  emp_id,
+  active,
+  name,
+  email,
+  office,
+  phone_number,
+  status_eff_date,
+  auth,
+  F15F1_Lab_lab_id
+FROM F15F1_emp WHERE
+  executive_director = 'N' AND
+  admin = 'Y' AND
+  chair_person = 'N' AND
+  lab_director = 'N';
+  
+CREATE OR REPLACE TRIGGER F15F1_admin_trigger INSTEAD OF
+  INSERT ON F15F1_admin_view
+  FOR EACH ROW
+BEGIN
+  INSERT INTO F15F1_emp (
+    emp_id,
+    active,
+    name,
+    email,
+    office,
+    phone_number,
+    status_eff_date,
+    auth,
+    executive_director, 
+    admin,
+    chair_person,
+    lab_director,
+    F15F1_Lab_lab_id )
+  VALUES (
+    :NEW.emp_id,
+    :NEW.active,
+    :NEW.name,
+    :NEW.email,
+    :NEW.office,
+    :NEW.phone_number,
+    :NEW.status_eff_date,
+    :NEW.auth,
+    'N', 
+    'Y',
+    'N',
+    'N',
+    :NEW.F15F1_Lab_lab_id);
+END;
+  /  
+    
+CREATE VIEW F15F1_chair_person_view AS
+SELECT
+  emp_id,
+  active,
+  name,
+  email,
+  office,
+  phone_number,
+  status_eff_date,
+  auth,
+  F15F1_Lab_lab_id
+FROM F15F1_emp WHERE
+  executive_director = 'N' AND
+  admin = 'N' AND
+  chair_person = 'Y' AND
+  lab_director = 'N';
+  
+CREATE OR REPLACE TRIGGER F15F1_chair_person_trigger INSTEAD OF
+  INSERT ON F15F1_chair_person_view
+  FOR EACH ROW
+BEGIN
+  INSERT INTO F15F1_emp (
+    emp_id,
+    active,
+    name,
+    email,
+    office,
+    phone_number,
+    status_eff_date,
+    auth,
+    executive_director, 
+    admin,
+    chair_person,
+    lab_director,
+    F15F1_Lab_lab_id )
+  VALUES (
+    :NEW.emp_id,
+    :NEW.active,
+    :NEW.name,
+    :NEW.email,
+    :NEW.office,
+    :NEW.phone_number,
+    :NEW.status_eff_date,
+    :NEW.auth,
+    'N', 
+    'N',
+    'Y',
+    'N',
+    :NEW.F15F1_Lab_lab_id);
+END;
+  /  
+    
+CREATE VIEW F15F1_lab_director_view AS
+SELECT
+  emp_id,
+  active,
+  name,
+  email,
+  office,
+  phone_number,
+  status_eff_date,
+  auth,
+  F15F1_Lab_lab_id
+FROM F15F1_emp WHERE
+  executive_director = 'N' AND
+  admin = 'N' AND
+  chair_person = 'N' AND
+  lab_director = 'Y';
+  
+CREATE OR REPLACE TRIGGER F15F1_lab_director_trigger INSTEAD OF
+  INSERT ON F15F1_lab_director_view
+  FOR EACH ROW
+BEGIN
+  INSERT INTO F15F1_emp (
+    emp_id,
+    active,
+    name,
+    email,
+    office,
+    phone_number,
+    status_eff_date,
+    auth,
+    executive_director, 
+    admin,
+    chair_person,
+    lab_director,
+    F15F1_Lab_lab_id )
+  VALUES (
+    :NEW.emp_id,
+    :NEW.active,
+    :NEW.name,
+    :NEW.email,
+    :NEW.office,
+    :NEW.phone_number,
+    :NEW.status_eff_date,
+    :NEW.auth,
+    'N', 
+    'N',
+    'N',
+    'Y',
+    :NEW.F15F1_Lab_lab_id);
+END;
+    
+
+ /   
+    
+    
+    
+    
+    
+    
+    

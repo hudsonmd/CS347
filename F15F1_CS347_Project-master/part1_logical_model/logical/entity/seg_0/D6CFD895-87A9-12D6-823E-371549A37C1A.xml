@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D6CFD895-87A9-12D6-823E-371549A37C1A" name="F15F1_RFE_Task">
+<createdBy>Kristine</createdBy>
+<createdTime>2015-11-22 22:23:29 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<engineerTo>
+<item key="3F0F5AA7-6073-6448-172C-CBF4D1FFB236" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="RFE_task_id" id="A9CE259A-45E4-3314-4C9E-22A200268561">
+<createdBy>Kristine</createdBy>
+<createdTime>2015-11-22 22:23:38 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<engineerTo>
+<item key="3F0F5AA7-6073-6448-172C-CBF4D1FFB236" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rfe_id" id="428E9B50-F7FE-9443-21F8-78AB770D8D37">
+<createdBy>Kristine</createdBy>
+<createdTime>2015-11-22 22:24:32 UTC</createdTime>
+<generatorID>BDCE51E8-CEE7-9DAE-0838-51D81404840F</generatorID>
+<ownerDesignName>logical_model</ownerDesignName>
+<engineerTo>
+<item key="3F0F5AA7-6073-6448-172C-CBF4D1FFB236" value="true"/>
+</engineerTo>
+<referedAttribute>E4CBD070-1EB2-A704-0596-F0D506F2527A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="task_id" id="B5BB3AAF-6315-DD80-FAF2-FE23874D0848">
+<createdBy>Kristine</createdBy>
+<createdTime>2015-11-22 22:24:38 UTC</createdTime>
+<generatorID>B2B6F6E8-F712-C512-7793-D7F33FD21DD7</generatorID>
+<ownerDesignName>logical_model</ownerDesignName>
+<engineerTo>
+<item key="3F0F5AA7-6073-6448-172C-CBF4D1FFB236" value="true"/>
+</engineerTo>
+<referedAttribute>1666503F-A712-045C-8109-B0382D853CBA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A14D051E-FE80-EA4F-5454-5C5A7E26DDF1" name="F15F1_RFE_Task PK">
+<createdBy>Kristine</createdBy>
+<createdTime>2015-11-22 22:23:49 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<engineerTo>
+<item key="3F0F5AA7-6073-6448-172C-CBF4D1FFB236" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A9CE259A-45E4-3314-4C9E-22A200268561</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

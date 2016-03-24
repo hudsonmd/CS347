@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EF01D6F0-9615-2CC7-2F8E-B329A8B323B3" name="F15F1_Project">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-19 21:19:21 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="project_id" id="1DC70374-E682-0712-1EA5-B3F2476B9BD3">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-19 21:19:43 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lab_id" id="129CD278-2FFC-C4FB-3ECE-582B35FAB1AA">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-25 20:39:02 UTC</createdTime>
+<generatorID>575804F2-45CF-8F82-3FF9-FB752E636F58</generatorID>
+<ownerDesignName>logical_model</ownerDesignName>
+<referedAttribute>6B1A1C0D-E041-EDB0-BCDA-5B89B974277A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D46D4558-F5B7-AD41-0C8F-6C27A8133EE5" name="Project PK">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-19 21:19:51 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1DC70374-E682-0712-1EA5-B3F2476B9BD3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

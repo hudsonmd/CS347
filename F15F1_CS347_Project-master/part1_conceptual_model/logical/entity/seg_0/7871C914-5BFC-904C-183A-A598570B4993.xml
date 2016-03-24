@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7871C914-5BFC-904C-183A-A598570B4993" name="F15F1_Comment">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-19 21:31:59 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="comment_id" id="AF6647A1-189C-3ADC-38C1-E535AE965FE6">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-19 21:32:25 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rfe_id" id="ABEBCA08-35B7-8B15-0DE2-9071797E47B6">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-19 21:33:00 UTC</createdTime>
+<generatorID>3192E898-6956-7179-A718-37FBBF3666F0</generatorID>
+<ownerDesignName>logical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>E4CBD070-1EB2-A704-0596-F0D506F2527A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comment_entry_date" id="B7874182-2168-4834-EABA-1BE4A50BF955">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-25 21:18:59 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comments" id="80B76DB3-903D-D3A3-4BB9-9A4D9C228F7D">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-25 21:19:16 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="emp_id" id="E6A4A51B-C352-8F25-8DA9-794D9DD823A6">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-25 21:20:29 UTC</createdTime>
+<generatorID>42BA0153-9B53-292D-47F2-C7BF5C4050B4</generatorID>
+<ownerDesignName>logical_model</ownerDesignName>
+<referedAttribute>44F30158-803A-F4DE-EFCE-88B06746645C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1EFA0416-1823-00F6-0606-654B10C7A8FE" name="Comment PK">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-19 21:32:36 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AF6647A1-189C-3ADC-38C1-E535AE965FE6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

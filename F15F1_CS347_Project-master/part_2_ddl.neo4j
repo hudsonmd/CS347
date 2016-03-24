@@ -1,0 +1,160 @@
+#Change the following oracle account id and password to your oracle account id and password. 
+#Also, change A0 to your group's number but don't use F15 because it will make some internal names be too long.
+
+conn = connectTo 'jdbc:oracle:thin:@sayonara.microlab.cs.utexas.edu:1521:orcl' 'C##cs347_klm3952' 'orcl_klm3952' 'rdf_mode' 'F1';
+
+#Neo4j on conn "MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r"
+
+##### CREATE GREAT HOUSES #####
+
+Neo4j on conn "CREATE (:royal_house { HOUSE_NAME :'Baratheon', SEAT : 'Red Keep', REGION : 'The Crownlands'})"
+Neo4j on conn "CREATE (:great_house { HOUSE_NAME :'Arryn', WORDS :'As High As Honor',SEAT :'The Eyrie',REGION :'The Vale of Arryn'})"
+Neo4j on conn "CREATE (:great_house { HOUSE_NAME :'Baratheon',WORDS :'Ours Is The Fury',SEAT :'Storms End',REGION : 'The Stormlands'})"
+Neo4j on conn "CREATE (:great_house { HOUSE_NAME :'Bolton',WORDS :  'Our Blades Are Sharp', SEAT :'The Dreadfort',REGION : 'The North'})"
+Neo4j on conn "CREATE (:great_house { HOUSE_NAME :'Frey',SEAT :'The Twins',REGION :'The Riverlands'})"
+Neo4j on conn "CREATE (:great_house { HOUSE_NAME :'Lannister',WORDS :'Hear Me Roar',SEAT :'Casterly Rock',REGION :'The Westerlands'})"
+Neo4j on conn "CREATE (:great_house { HOUSE_NAME :'Tyrell',WORDS : 'Growing Strong',SEAT :'Highgarden',REGION :'The Reach'})"
+#Neo4j on conn "CREATE (:great_house { HOUSE_NAME :'Martell',WORDS : 'Unbowed, Unbend, Unbroken',SEAT :'Sunspear',REGION :'Dorne'}"
+Neo4j on conn "CREATE (:great_house { HOUSE_NAME :'Greyjoy',WORDS :'We Do Not Sow',SEAT :'Pyke',REGION :'The Iron Islands'})"
+Neo4j on conn "CREATE (:great_house { HOUSE_NAME :'Stark',WORDS : 'Winter Is Coming',SEAT :'Winterfell',REGION :'The North'})"
+Neo4j on conn "CREATE (:great_house { HOUSE_NAME :'Targaryen',WORDS : 'Fire And Blood'})"
+
+
+##### CREATE WAR #####
+
+Neo4j on conn "CREATE(:war {NAME: 'War of Five Kings'})"
+
+Neo4j on conn "MATCH (g:great_house),(w:war) WHERE g.HOUSE_NAME = 'Greyjoy' AND w.NAME = 'War of Five Kings' CREATE (g)-[:FIGHTS_IN]->(w)"
+Neo4j on conn "MATCH (g:great_house),(w:war) WHERE g.HOUSE_NAME = 'Stark' AND w.NAME = 'War of Five Kings' CREATE (g)-[:FIGHTS_IN]->(w)"
+Neo4j on conn "MATCH (g:great_house),(w:war) WHERE g.HOUSE_NAME = 'Baratheon' AND w.NAME = 'War of Five Kings' CREATE (g)-[:FIGHTS_IN]->(w)"
+Neo4j on conn "MATCH (r:royal_house),(w:war) WHERE r.HOUSE_NAME = 'Baratheon' AND w.NAME = 'War of Five Kings' CREATE (r)-[:FIGHTS_IN]->(w)"
+
+##### CREATE CHARACTERS #####
+
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Minor character or Unknown'})"
+
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Varys'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Brienne'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Bronn'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Gilly'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Melisandre'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Missandei'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Grey Worm'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Shae'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Ygritte'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Gendry'})"
+Neo4j on conn "CREATE (:character {SURNAME : 'Drogo', TITLE :   'Khal'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Roose',SURNAME : 'Bolton'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Ramsay',SURNAME : 'Bolton'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Jorah',SURNAME : 'Mormont'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Jon',SURNAME : 'Snow'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Renly',SURNAME : 'Baratheon'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Stannis',SURNAME : 'Baratheon'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Tywin',SURNAME : 'Lannister'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Sandor',SURNAME : 'Clegane'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Joffrey',SURNAME : 'Baratheon'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Rickon',SURNAME : 'Stark'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Catelyn',SURNAME : 'Stark'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Robb',SURNAME : 'Stark'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Talisa',SURNAME : 'Stark'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Ned', SURNAME : 'Stark'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Robert',SURNAME : 'Baratheon'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Viserys',SURNAME : 'Targaryen'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Daario',SURNAME : 'Naharis'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Tommen',SURNAME : 'Baratheon'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Ellaria',SURNAME : 'Sand'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Sansa',SURNAME : 'Stark'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Arya',SURNAME : 'Stark'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Bran',SURNAME : 'Stark'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Theon',SURNAME : 'Greyjoy'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Samwell',SURNAME : 'Tarly'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Tormund',SURNAME : 'Giantsbane'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Tyrion',SURNAME : 'Lannister'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Jaime',SURNAME : 'Lannister'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Cersei',SURNAME : 'Lannister'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Daenerys',SURNAME : 'Targaryen'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Petyr',SURNAME :   'Baelish'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Loras',SURNAME :   'Tyrell'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Margaery',SURNAME :   'Tyrell'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Davos',SURNAME :   'Seaworth'})"
+Neo4j on conn "CREATE (:character { FIRST_NAME : 'Walder',SURNAME :   'Frey'})"
+
+
+##### Neo4j on conn "MATCH MEMBERS OF GREAT HOUSES WITH THEIR HOUSE #####
+
+#Neo4j on conn "MATCH (c:character),(g:great_house) WHERE c.SURNAME = g.HOUSE_NAME CREATE (c)-[:MEMBER_OF]->(g)"
+
+
+##### CREATE RELATIONSHIPS BETWEEN CHARACTERS #####
+
+##### PARENTS TO CHILDREN #####
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Tywin' AND c2.FIRST_NAME = 'Cersei' CREATE (c1)-[:FATHER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Tywin' AND c2.FIRST_NAME = 'Jaime' CREATE (c1)-[:FATHER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Tywin' AND c2.FIRST_NAME = 'Tyrion' CREATE (c1)-[:FATHER_OF]->(c2)"
+
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Ned' AND c2.FIRST_NAME = 'Jon' CREATE (c1)-[:FATHER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Ned' AND c2.FIRST_NAME = 'Robb' CREATE (c1)-[:FATHER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Ned' AND c2.FIRST_NAME = 'Sansa' CREATE (c1)-[:FATHER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Ned' AND c2.FIRST_NAME = 'Arya' CREATE (c1)-[:FATHER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Ned' AND c2.FIRST_NAME = 'Bran' CREATE (c1)-[:FATHER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Ned' AND c2.FIRST_NAME = 'Rickon' CREATE (c1)-[:FATHER_OF]->(c2)"
+
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Catelyn' AND c2.FIRST_NAME = 'Robb' CREATE (c1)-[:MOTHER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Catelyn' AND c2.FIRST_NAME = 'Sansa' CREATE (c1)-[:MOTHER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Catelyn' AND c2.FIRST_NAME = 'Arya' CREATE (c1)-[:MOTHER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Catelyn' AND c2.FIRST_NAME = 'Bran' CREATE (c1)-[:MOTHER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Catelyn' AND c2.FIRST_NAME = 'Rickon' CREATE (c1)-[:MOTHER_OF]->(c2)"
+
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Cersei' AND c2.FIRST_NAME = 'Joffrey' CREATE (c1)-[:MOTHER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Cersei' AND c2.FIRST_NAME = 'Tommen' CREATE (c1)-[:MOTHER_OF]->(c2)"
+
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Jaime' AND c2.FIRST_NAME = 'Joffrey' CREATE (c1)-[:FATHER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Jaime' AND c2.FIRST_NAME = 'Tommen' CREATE (c1)-[:FATHER_OF]->(c2)"
+
+##### SPOUSE TO SPOUSE #####
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Cersei' AND c2.FIRST_NAME = 'Robert' CREATE (c1)-[:SPOUSE_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Catelyn' AND c2.FIRST_NAME = 'Ned' CREATE (c1)-[:SPOUSE_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Sansa' AND c2.FIRST_NAME = 'Ramsay' CREATE (c1)-[:SPOUSE_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Margaery' AND c2.FIRST_NAME = 'Tommen' CREATE (c1)-[:SPOUSE_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Daenerys' AND c2.FIRST_NAME = 'Drogo' CREATE (c1)-[:SPOUSE_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Talisa' AND c2.FIRST_NAME = 'Robb' CREATE (c1)-[:SPOUSE_OF]->(c2)"
+
+##### LOVER TO LOVER  #####
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Cersei' AND c2.FIRST_NAME = 'Jaime' CREATE (c1)-[:LOVER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Tyrion' AND c2.FIRST_NAME = 'Shae' CREATE (c1)-[:LOVER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Jon' AND c2.FIRST_NAME = 'Ygritte' CREATE (c1)-[:LOVER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Daenerys' AND c2.FIRST_NAME = 'Daario' CREATE (c1)-[:LOVER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Renly' AND c2.FIRST_NAME = 'Loras' CREATE (c1)-[:LOVER_OF]->(c2)"
+
+##### KILLER TO KILLER  ##### 
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Tyrion' AND c2.FIRST_NAME = 'Tywin' CREATE (c1)-[:KILLER_OF]->(c2)" 
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Tyrion' AND c2.FIRST_NAME = 'Shae' CREATE (c1)-[:KILLER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Drogo' AND c2.FIRST_NAME = 'Viserys' CREATE (c1)-[:KILLER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Renly' AND c2.FIRST_NAME = 'Melisandre' CREATE (c1)-[:KILLER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Minor charcter or Unknown' AND c2.FIRST_NAME = 'Robb' CREATE (c1)-[:KILLER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Minor charcter or Unknown' AND c2.FIRST_NAME = 'Talisa' CREATE (c1)-[:KILLER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Minor charcter or Unknown' AND c2.FIRST_NAME = 'Catelyn' CREATE (c1)-[:KILLER_OF]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Minor character or Unknown' AND c2.FIRST_NAME = 'Myrcella' CREATE (c1)-[:KILLER_OF]->(c2)"
+
+##### CONSPIRES AND HAS KILLED  ##### 
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Cersei' AND c2.FIRST_NAME = 'Robert' CREATE (c1)-[:HAS_KILLED]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Stannis' AND c2.FIRST_NAME = 'Renly' CREATE (c1)-[:HAS_KILLED]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Walder' AND c2.FIRST_NAME = 'Talisa' CREATE (c1)-[:HAS_KILLED]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Walder' AND c2.FIRST_NAME = 'Catelyn' CREATE (c1)-[:HAS_KILLED]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Walder' AND c2.FIRST_NAME = 'Robb' CREATE (c1)-[:HAS_KILLED]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Minor character or Unknown' AND c2.FIRST_NAME = 'Joffrey' CREATE (c1)-[:HAS_KILLED]->(c2)"
+
+##### WARD TO FAMILY #####
+Neo4j on conn "MATCH (c:character),(g:great_house) WHERE c.FIRST_NAME = 'Theon' AND g.HOUSE_NAME = 'Stark' CREATE (c)-[:WARD_OF]->(g)"
+
+##### PERSON TO FAMILY/PERSON THEY SERVE #####
+Neo4j on conn "MATCH (c:character),(r:royal_house) WHERE c.FIRST_NAME = 'Varys' AND r.HOUSE_NAME = 'Baratheon' CREATE (c)-[:SERVES]->(r)"
+Neo4j on conn "MATCH (c:character),(g:great_house) WHERE c.FIRST_NAME = 'Brienne' AND g.HOUSE_NAME = 'Stark' CREATE (c)-[:SERVES]->(g)"
+Neo4j on conn "MATCH (c:character),(r:royal_house) WHERE c.FIRST_NAME = 'Sandor' AND r.HOUSE_NAME = 'Baratheon' CREATE (c)-[:SERVES]->(r)"
+Neo4j on conn "MATCH (c:character),(g:great_house) WHERE c.FIRST_NAME = 'Davos' AND g.HOUSE_NAME = 'Baratheon' CREATE (c)-[:SERVES]->(g)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Bronn' AND c2.FIRST_NAME = 'Tyrion' CREATE (c1)-[:SERVES]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Missandei' AND c2.FIRST_NAME = 'Daenerys' CREATE (c1)-[:SERVES]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Grey Worm' AND c2.FIRST_NAME = 'Daenerys' CREATE (c1)-[:SERVES]->(c2)"
+Neo4j on conn "MATCH (c1:character),(c2:character) WHERE c1.FIRST_NAME = 'Daario' AND c2.FIRST_NAME = 'Daenerys' CREATE (c1)-[:SERVES]->(c2)"
+
+

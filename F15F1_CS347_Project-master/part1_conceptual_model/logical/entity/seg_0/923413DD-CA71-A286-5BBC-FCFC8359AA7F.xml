@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="923413DD-CA71-A286-5BBC-FCFC8359AA7F" name="F15F1_History">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-25 20:40:16 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="date" id="EF684ED7-E5CE-D02F-518F-4DDA8F1BB653">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-25 20:44:04 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="history_id" id="0BDBE878-8443-8FF0-CF05-7FF98DB94BD9">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-25 20:48:45 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rfe_id" id="61884DCD-BE01-B6E7-1E59-60BB744A8452">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-25 20:50:26 UTC</createdTime>
+<generatorID>BBDD6BB5-CB64-4D76-9291-3FC52C8B8D35</generatorID>
+<ownerDesignName>logical_model</ownerDesignName>
+<referedAttribute>E4CBD070-1EB2-A704-0596-F0D506F2527A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status" id="E5F5E23C-07EE-5DB4-ED94-23EE6EB884D6">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-25 20:51:06 UTC</createdTime>
+<generatorID>674065CD-2A66-940C-DF23-51120D130A2F</generatorID>
+<ownerDesignName>logical_model</ownerDesignName>
+<referedAttribute>3E87B2EC-2B98-2028-10D7-8DCB6B9E987D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="emp_id" id="9D1B9231-9F34-0BCD-AA75-1C3815817B62">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-25 21:17:00 UTC</createdTime>
+<generatorID>84B3BBD4-9297-7DB8-1637-BB1C1222FFE9</generatorID>
+<ownerDesignName>logical_model</ownerDesignName>
+<referedAttribute>44F30158-803A-F4DE-EFCE-88B06746645C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D87355AE-4A0D-88BF-EDA5-117F97829323" name="F15.F1_Status_History PK">
+<createdBy>Kelsey</createdBy>
+<createdTime>2015-10-25 20:40:55 UTC</createdTime>
+<ownerDesignName>logical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0BDBE878-8443-8FF0-CF05-7FF98DB94BD9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

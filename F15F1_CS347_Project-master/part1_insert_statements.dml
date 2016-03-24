@@ -1,0 +1,148 @@
+-- Truncate each of the sample data tables using the following statement:
+DELETE FROM F15F1_APPROVER;
+DELETE FROM F15F1_AUTH;
+DELETE FROM F15F1_COMMENT;
+DELETE FROM F15F1_DOCUMENT;
+DELETE FROM F15F1_HISTORY;
+DELETE FROM F15F1_RFE_TASK;
+DELETE FROM F15F1_ROLE;
+DELETE FROM F15F1_TASK;
+DELETE FROM F15F1_CONTACT;
+DELETE FROM F15F1_RFE;
+DELETE FROM F15F1_STATUS;
+DELETE FROM F15F1_EMP;
+DELETE FROM F15F1_LAB;
+
+-- Disable the PK triggers on the sample data tables using the following statement:
+alter trigger F15F1_ADMIN_TRIGGER disable;
+alter trigger F15F1_APPROVER_AUD_TRIG disable;
+alter trigger F15F1_APPROVER_PK_TRIG disable;
+alter trigger F15F1_AUTH_AUD_TRIG disable;
+alter trigger F15F1_AUTH_PK_TRIG disable;
+alter trigger F15F1_CHAIR_PERSON_TRIGGER disable;
+alter trigger F15F1_COMMENT_AUD_TRIG disable;
+alter trigger F15F1_COMMENT_PK_TRIG disable;
+alter trigger F15F1_CONTACT_AUD_TRIG disable;
+alter trigger F15F1_CONTACT_PK_TRIG disable;
+alter trigger F15F1_DOCUMENT_AUD_TRIG disable;
+alter trigger F15F1_DOCUMENT_PK_TRIG disable;
+alter trigger F15F1_EMP_AUD_TRIG disable;
+alter trigger F15F1_EMP_PK_TRIG disable;
+alter trigger F15F1_EMP_TRIGGER disable;
+alter trigger F15F1_EXEC_DIR_TRIGGER disable;
+alter trigger F15F1_HISTORY_AUD_TRIG disable;
+alter trigger F15F1_HISTORY_PK_TRIG disable;
+alter trigger F15F1_LAB_AUD_TRIG disable;
+alter trigger F15F1_LAB_DIRECTOR_TRIGGER disable;
+alter trigger F15F1_LAB_PK_TRIG disable;
+alter trigger F15F1_RFE_AUD_TRIG disable;
+alter trigger F15F1_RFE_PK_TRIG disable;
+alter trigger F15F1_RFE_TASK_AUD_TRIG disable;
+alter trigger F15F1_RFE_TASK_PK_TRIG disable;
+alter trigger F15F1_ROLE_AUD_TRIG disable;
+alter trigger F15F1_ROLE_PK_TRIG disable;
+alter trigger F15F1_STATUS_AUD_TRIG disable;
+alter trigger F15F1_STATUS_PK_TRIG disable;
+alter trigger F15F1_TASK_AUD_TRIG disable;
+alter trigger F15F1_TASK_PK_TRIG disable;
+
+-- Put all of the sample data INSERT statements here. Be sure to use PK and FK values that
+-- are < 100 so that they won't be reapeated by the PK triggers when they are re-enabled.
+
+-- INSERT STATUSES
+INSERT INTO F15F1_STATUS(STATUS, RFE_STATUS, DESCRIPTION)
+VALUES(101, 'Returned', 'The RFE has been returned for further information or 
+                         clarification. Once Submitted again, it will follow the
+                          same routing as an Entered RFE.');
+INSERT INTO F15F1_STATUS(STATUS, RFE_STATUS, DESCRIPTION)
+VALUES(100, 'Submitted', 'The RFE has been submitted to the Lab System 
+                          Administrator for approval.');
+
+INSERT INTO F15F1_STATUS(STATUS, RFE_STATUS, DESCRIPTION)
+VALUES(120, 'Recalled', 'The requestor has recalled an RFE that has not yet 
+                         reached final approval. Once Submitted again, it will 
+                         follow the same routing as an entered RFE.');
+
+INSERT INTO F15F1_STATUS(STATUS, RFE_STATUS, DESCRIPTION)
+VALUES(121, 'Rejected', 'The RFE has been rejected and cannot be implemented.');
+
+INSERT INTO F15F1_STATUS(STATUS, RFE_STATUS, DESCRIPTION)
+VALUES(102, 'SA Approved', 'The Lab System Administrator has approved the RFE,
+                            it has been submitted for Lab Director approval.');
+
+INSERT INTO F15F1_STATUS(STATUS, RFE_STATUS, DESCRIPTION)
+VALUES(140, 'LD Approved', 'The Lab Director has approved the RFE; it has been 
+                            submitted for Network Security Panel approval.');
+
+INSERT INTO F15F1_STATUS(STATUS, RFE_STATUS, DESCRIPTION)
+VALUES(103, 'CH Approved', 'The Lab Director has approved the RFE; it has been 
+                            submitted to the Chairperson of Security Panel approval.');
+
+INSERT INTO F15F1_STATUS(STATUS, RFE_STATUS, DESCRIPTION)
+VALUES(104, 'Final Approved', 'The Executive Directors Office has given final 
+                               approval for the RFE and it may be implemented.');
+
+INSERT INTO F15F1_STATUS(STATUS, RFE_STATUS, DESCRIPTION)
+VALUES(160, 'Entered', 'The RFE has been created but has not yet been submitted 
+                        for approval');
+
+-- INSERT LAB
+INSERT INTO F15F1_LAB(LAB_ID)
+VALUES(1);
+
+-- INSERT EMPLOYEES
+INSERT INTO F15F1_EMP(EMP_ID, ACTIVE, NAME, EMAIL, OFFICE, PHONE_NUMBER, STATUS_EFF_DATE, EXECUTIVE_DIRECTOR, ADMIN, CHAIR_PERSON, LAB_DIRECTOR, F15F1_LAB_LAB_ID)
+VALUES(1, 'Y', 'Lab Director', 'lab_director@company.com', 'A', '5552937294', TO_DATE('2003/05/03', 'yyyy/mm/dd'), 'N', 'N', 'N', 'Y', 1);
+
+INSERT INTO F15F1_EMP(EMP_ID, ACTIVE, NAME, EMAIL, OFFICE, PHONE_NUMBER, STATUS_EFF_DATE, EXECUTIVE_DIRECTOR, ADMIN, CHAIR_PERSON, LAB_DIRECTOR, F15F1_LAB_LAB_ID)
+VALUES(2, 'Y', 'System Administrator', 'sys_admin@company.com', 'B', '55592730189', TO_DATE('2003/05/03', 'yyyy/mm/dd'), 'N', 'Y', 'N', 'N', 1);
+
+INSERT INTO F15F1_EMP(EMP_ID, ACTIVE, NAME, EMAIL, OFFICE, PHONE_NUMBER, STATUS_EFF_DATE, EXECUTIVE_DIRECTOR, ADMIN, CHAIR_PERSON, LAB_DIRECTOR, F15F1_LAB_LAB_ID)
+VALUES(3, 'Y', 'Chair Person', 'chair_person@company.com', 'B', '5559993048', TO_DATE('2003/05/03', 'yyyy/mm/dd'), 'N', 'N', 'Y', 'N', 1);
+
+INSERT INTO F15F1_EMP(EMP_ID, ACTIVE, NAME, EMAIL, OFFICE, PHONE_NUMBER, STATUS_EFF_DATE, EXECUTIVE_DIRECTOR, ADMIN, CHAIR_PERSON, LAB_DIRECTOR, F15F1_LAB_LAB_ID)
+VALUES(4, 'Y', 'Regular Bob', 'bob@company.com', 'D', '55593847222', TO_DATE('2003/05/03', 'yyyy/mm/dd'), 'N', 'N', 'N', 'N', 1);
+
+INSERT INTO F15F1_EMP(EMP_ID, ACTIVE, NAME, EMAIL, OFFICE, PHONE_NUMBER, STATUS_EFF_DATE, EXECUTIVE_DIRECTOR, ADMIN, CHAIR_PERSON, LAB_DIRECTOR, F15F1_LAB_LAB_ID)
+VALUES(5, 'Y', 'Executive Director', 'exec_dir@company.com', 'A', '5559203927', TO_DATE('2003/05/03', 'yyyy/mm/dd'), 'Y', 'N', 'N', 'N', 1);
+
+-- INSERT AUTH
+INSERT INTO F15F1_AUTH(AUTH_ID, AUTH, F15F1_EMP_EMP_ID)
+VALUES(100, 'Edit', 5);
+
+-- INSERT ROLE
+INSERT INTO F15F1_ROLE(ROLE_CODE, ROLE_TYPE, DESCRIPTION)
+VALUES(100, 'FYI Reviewer', 'FYI Reviewer');
+
+-- Enable the PK triggers on the sample data tables using the following statement:
+alter trigger F15F1_ADMIN_TRIGGER enable;
+alter trigger F15F1_APPROVER_AUD_TRIG enable;
+alter trigger F15F1_APPROVER_PK_TRIG enable;
+alter trigger F15F1_AUTH_AUD_TRIG enable;
+alter trigger F15F1_AUTH_PK_TRIG enable;
+alter trigger F15F1_CHAIR_PERSON_TRIGGER enable;
+alter trigger F15F1_COMMENT_AUD_TRIG enable;
+alter trigger F15F1_COMMENT_PK_TRIG enable;
+alter trigger F15F1_CONTACT_AUD_TRIG enable;
+alter trigger F15F1_CONTACT_PK_TRIG enable;
+alter trigger F15F1_DOCUMENT_AUD_TRIG enable;
+alter trigger F15F1_DOCUMENT_PK_TRIG enable;
+alter trigger F15F1_EMP_AUD_TRIG enable;
+alter trigger F15F1_EMP_PK_TRIG enable;
+alter trigger F15F1_EMP_TRIGGER enable;
+alter trigger F15F1_EXEC_DIR_TRIGGER enable;
+alter trigger F15F1_HISTORY_AUD_TRIG enable;
+alter trigger F15F1_HISTORY_PK_TRIG enable;
+alter trigger F15F1_LAB_AUD_TRIG enable;
+alter trigger F15F1_LAB_DIRECTOR_TRIGGER enable;
+alter trigger F15F1_LAB_PK_TRIG enable;
+alter trigger F15F1_RFE_AUD_TRIG enable;
+alter trigger F15F1_RFE_PK_TRIG enable;
+alter trigger F15F1_RFE_TASK_AUD_TRIG enable;
+alter trigger F15F1_RFE_TASK_PK_TRIG enable;
+alter trigger F15F1_ROLE_AUD_TRIG enable;
+alter trigger F15F1_ROLE_PK_TRIG enable;
+alter trigger F15F1_STATUS_AUD_TRIG enable;
+alter trigger F15F1_STATUS_PK_TRIG enable;
+alter trigger F15F1_TASK_AUD_TRIG enable;
+alter trigger F15F1_TASK_PK_TRIG enable;
