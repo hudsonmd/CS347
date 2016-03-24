@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F437394F-37F8-8332-D4FB-32A1A09A7BFA" name="Person-Project">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 22:07:56 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="person-project-id" id="82938051-953A-408B-5759-15992FA6D854">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 22:08:04 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="person-id" id="44490AD2-059B-3F36-857D-2AE86ED17BA7">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 22:09:04 UTC</createdTime>
+<generatorID>ED7499D0-EE44-0B46-92F9-D74771364937</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<referedAttribute>A5530E34-0137-41FC-8A6A-DD73D7FF49D6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="project-id" id="7FF8B441-D4EB-97C9-6A3B-120F4DE9F810">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 22:09:23 UTC</createdTime>
+<generatorID>F59EAE51-1380-799A-5728-3A2800EFBA11</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<referedAttribute>1B69112D-7E65-939A-2008-692A85BCA2D2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0C690546-D5E9-4E98-786B-270A57A91052" name="Person-Project PK">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 22:08:16 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>82938051-953A-408B-5759-15992FA6D854</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

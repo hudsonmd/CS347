@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AED7DA23-4D23-B7FE-5A26-00851367A441" name="Parent-Child">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 22:03:57 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="parent-child-id" id="7BDDD6B4-EB26-03F5-95A9-FD104510BC90">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 22:07:30 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="parent" id="E53CE0A5-B698-F6EA-1CDD-8A58324ECB22">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 22:05:58 UTC</createdTime>
+<generatorID>D14C0CA3-3F42-B00F-EC02-2E53B3CA5B0C</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<referedAttribute>A5530E34-0137-41FC-8A6A-DD73D7FF49D6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="child" id="0EAB868C-1EC1-7605-666A-E31D5551CD2B">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 22:06:33 UTC</createdTime>
+<generatorID>AF0936A7-F7B0-837A-3424-698C5AC88276</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<referedAttribute>A5530E34-0137-41FC-8A6A-DD73D7FF49D6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="494AAF66-0B65-CE82-090A-E8C4DF99E8DF" name="Parent-Child PK">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 22:07:43 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7BDDD6B4-EB26-03F5-95A9-FD104510BC90</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
