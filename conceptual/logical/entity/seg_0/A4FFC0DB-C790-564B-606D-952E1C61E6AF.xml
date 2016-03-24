@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A4FFC0DB-C790-564B-606D-952E1C61E6AF" name="Previous-Project">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 21:27:02 UTC</createdTime>
+<ownerDesignName>conceptual</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>2AB60DE3-062C-2BB4-53DA-769E652C38BF</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="end-date-month" id="28B58E21-F3C7-D0AB-BDE9-A2F6057555AE">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 21:46:39 UTC</createdTime>
+<ownerDesignName>conceptual</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="end-date-day" id="A7370286-05D7-FB48-A3EE-218413E3EF33">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 21:46:55 UTC</createdTime>
+<ownerDesignName>conceptual</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="end-date-year" id="19154EBB-9F3F-AADF-3858-7B893C726A7C">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 21:47:06 UTC</createdTime>
+<ownerDesignName>conceptual</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="est-person-hours" id="9B5647F1-08BA-1E73-9D5E-8AD318D7BB03">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 21:47:14 UTC</createdTime>
+<ownerDesignName>conceptual</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

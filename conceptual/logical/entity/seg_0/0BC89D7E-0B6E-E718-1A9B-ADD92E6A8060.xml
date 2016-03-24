@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0BC89D7E-0B6E-E718-1A9B-ADD92E6A8060" name="Current-Project">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 21:26:52 UTC</createdTime>
+<ownerDesignName>conceptual</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>2AB60DE3-062C-2BB4-53DA-769E652C38BF</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="project-active" id="FB1DA26F-2777-170E-539D-E51865B2A4BA">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 21:48:52 UTC</createdTime>
+<ownerDesignName>conceptual</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

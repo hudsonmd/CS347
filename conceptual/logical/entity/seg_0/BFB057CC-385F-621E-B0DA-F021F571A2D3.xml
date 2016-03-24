@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BFB057CC-385F-621E-B0DA-F021F571A2D3" name="Employee">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 21:02:47 UTC</createdTime>
+<ownerDesignName>conceptual</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>A28D5FD9-33ED-BC8D-784A-8D2A416C0C32</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="employee-id" id="25013384-5CED-D11E-663F-9AE7D16E6D3B">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 21:03:10 UTC</createdTime>
+<ownerDesignName>conceptual</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="salary" id="FA68ABAC-6A7B-B56F-E951-A7D9201E8C5A">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 21:03:21 UTC</createdTime>
+<ownerDesignName>conceptual</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="salary-exception" id="399C1AB0-5E33-CD74-7A9B-565AEB55F208">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 21:03:31 UTC</createdTime>
+<ownerDesignName>conceptual</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="manager" id="3E264E1E-1DF2-84E2-6403-37DB2A9B34D8">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-24 21:28:26 UTC</createdTime>
+<generatorID>E11B63FE-B006-3291-EF9E-128C7A6045EC</generatorID>
+<ownerDesignName>conceptual</ownerDesignName>
+<engineerTo>
+<item key="B3361134-B08E-0F2F-2062-513788C32BE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>A5530E34-0137-41FC-8A6A-DD73D7FF49D6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>
