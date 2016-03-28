@@ -1,0 +1,278 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9DA9E00B-2470-753E-76C8-829F70F92AA7" name="Person">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>A28D5FD9-33ED-BC8D-784A-8D2A416C0C32</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="person-id" id="B7105277-D18F-CC22-16D1-029EF89878B9">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>A5530E34-0137-41FC-8A6A-DD73D7FF49D6</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="first-name" id="63E900DE-9244-8909-B579-E9705CE33EDB">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>01CE7364-AE7D-31FE-9F98-671CB6FC2928</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="last-name" id="055C2607-0052-6D37-EC97-1794A995E4D9">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>30737404-B001-060D-5F6A-4C57757BABA4</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="home_address" id="A80AF083-36DA-E363-AD33-9E043DD6BFE3">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>3F1A1066-9C36-A6CA-2649-58A2AF6F4F6F</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="zipcode" id="0E4ECCEC-DE47-896A-193D-CF5938CC1A35">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>3BB0DDC8-FDCA-E3AB-F6C7-53B37B6C1863</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="home-phone" id="7754F705-6668-170E-E05D-1B4D14890AF0">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>0A9DF784-7A91-FCDD-BE95-C7CC9220E547</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="us-citizen" id="B988DBDC-72EF-50E1-E805-CADB9A00CF3F">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>6CC3A5D1-46FA-57DA-E4C5-4BFF84F8825F</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="spouse" id="3A9D2D68-D130-3A52-FC67-9306911A36E5">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>CD50D4A3-8E84-A8F8-345D-CEFE9DDE6363</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7E8C07F4-0E4E-24B1-F3EF-4B30360BD5A0" referredColumn="B7105277-D18F-CC22-16D1-029EF89878B9"/>
+</associations>
+</Column>
+<Column name="employee-id" id="8A48395D-DD2D-EB57-D55C-7DF6B38D6159">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>FFA185E3-80F5-0A22-69B6-E5A3DE284D17</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="salary" id="B622D674-5A02-1134-1064-E200548E7A90">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>8B0FE824-14EF-A108-EBEF-E1950F8FD115</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="salary-exception" id="7BC1D88F-7E2E-64FE-2002-DA3B1401E896">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>3A6FBAA4-53AF-406D-0D1F-E54583A9ABAE</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IsFired" id="8D099A05-8D9B-3A63-2E83-3801B5952718">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>469F26EB-A512-707C-5AC6-FD3811F9CDF7</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="manager" id="C19FF669-5BCA-B012-BA46-F195840F4950">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>88BFD34C-8160-E4F0-C09C-74D3CAF7B4AF</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="81E92611-D551-012D-0F21-2D6AC51C3C87" referredColumn="B7105277-D18F-CC22-16D1-029EF89878B9"/>
+</associations>
+</Column>
+<Column name="type" id="696BFB0B-BABB-BCD5-80E8-BD43D8AAD0BC">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>16BBF04B-DC89-3C05-1656-B7CA7BB9E355</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bonus" id="5B76D58B-A869-C6C4-DA35-B168308499FB">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>22201B53-2803-37F9-ECAD-B52E7DC4E504</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dept-no" id="948B9F46-5625-19A4-BDF6-5B45879ECDF1">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>7F44F2CB-1707-C4F8-6805-62DCD2ED5C22</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="34262D43-65CA-9605-6FE4-5853CCE4F6E2" referredColumn="C1285BF1-0E7C-851E-CCB6-ABE06A5EEF71"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="26BA095D-7959-7FF3-BC8D-9D556F93F3AA" name="Person_PK">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>55997666-9222-6B43-7B9B-63B126046108</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7105277-D18F-CC22-16D1-029EF89878B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8F88D266-07F4-1098-D8F0-BF882432A9B8" name="Person__IDX">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>370E9FFB-AFB4-FB9C-DBB5-81509A758E60</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="3A9D2D68-D130-3A52-FC67-9306911A36E5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0F5E98F3-7346-8C0B-BC16-BC7186ED1E6D" name="Person_Person_FK">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>370E9FFB-AFB4-FB9C-DBB5-81509A758E60</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A9D2D68-D130-3A52-FC67-9306911A36E5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2DE25FE4-6773-C38B-EABA-1558174C03DE" name="Person_Department_FK">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>84F0D385-D189-DB78-F540-410C80D40451</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="948B9F46-5625-19A4-BDF6-5B45879ECDF1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="102DD235-4631-F182-DD67-3F4DEFDE02F4" name="Person_Person_FKv1">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>E11B63FE-B006-3291-EF9E-128C7A6045EC</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C19FF669-5BCA-B012-BA46-F195840F4950"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

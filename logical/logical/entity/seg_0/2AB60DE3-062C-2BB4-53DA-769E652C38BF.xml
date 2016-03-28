@@ -55,7 +55,7 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="department" id="52CF19AD-0C49-EBE1-354D-A8839BA42EA1">
+<Attribute name="dept-no" id="52CF19AD-0C49-EBE1-354D-A8839BA42EA1">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-24 21:48:02 UTC</createdTime>
 <generatorID>7BD82B5E-0CAF-EEED-5C43-F4CD00FA2E01</generatorID>

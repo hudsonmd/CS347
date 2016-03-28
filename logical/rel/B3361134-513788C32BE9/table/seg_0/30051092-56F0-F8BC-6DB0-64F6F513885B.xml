@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="30051092-56F0-F8BC-6DB0-64F6F513885B" name="Person-Project">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>F437394F-37F8-8332-D4FB-32A1A09A7BFA</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<ordsAlias>personproject</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="person-project-id" id="05D44DD7-53ED-989A-7269-983154C5DE1B">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>82938051-953A-408B-5759-15992FA6D854</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="person-id" id="C7F9901B-BDCF-8CDD-1A6C-FF4A8296274D">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>44490AD2-059B-3F36-857D-2AE86ED17BA7</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9B73C2F0-C6FA-892D-5E93-F64BE6BCC7D7" referredColumn="B7105277-D18F-CC22-16D1-029EF89878B9"/>
+</associations>
+</Column>
+<Column name="project-id" id="DFC2146C-36CB-390C-2B9C-B1FF56957ED2">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>7FF8B441-D4EB-97C9-6A3B-120F4DE9F810</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4DCE8DD3-9ACA-2FF2-A782-F5078DAB90A7" referredColumn="8042BA78-E75D-1686-C017-9D0E7F67CA4E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5C2F8C43-43E2-F000-26E0-020A07EBB6AB" name="Person-Project_PK">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>0C690546-D5E9-4E98-786B-270A57A91052</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05D44DD7-53ED-989A-7269-983154C5DE1B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="43EAEB06-A328-D68B-730A-E34D4A567A14" name="Person-Project_Person_FK">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>ED7499D0-EE44-0B46-92F9-D74771364937</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7F9901B-BDCF-8CDD-1A6C-FF4A8296274D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="201E75E6-714D-3FE4-EF21-04731223B7B0" name="Person-Project_Project_FK">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-28 17:47:43 UTC</createdTime>
+<generatorID>F59EAE51-1380-799A-5728-3A2800EFBA11</generatorID>
+<ownerDesignName>logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DFC2146C-36CB-390C-2B9C-B1FF56957ED2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
