@@ -31,7 +31,7 @@
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="2AB60DE3-062C-2BB4-53DA-769E652C38BF" otype="Entity" vid="3FCC234C-DFBE-3541-4CF4-5DCB5DBB2FE4">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="913" y="348" width="200" height="182"/>
+<bounds x="913" y="348" width="205" height="201"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.TVNote" oid="51483250-BA62-8E5B-0BB3-4B6AAD8F5059" otype="Note" vid="35972D13-018E-16A1-5849-C8B6CC51D8B9">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -81,8 +81,8 @@
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <lineWidth>1</lineWidth>
 <points>
-<point x="1027" y="216"/>
-<point x="1026" y="348"/>
+<point x="1015" y="216"/>
+<point x="1015" y="348"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="84F0D385-D189-DB78-F540-410C80D40451" otype="Relation" vid_source="A68B849F-E2C8-589F-EF74-1F198743DB86" vid_target="0E2BDBB4-C7A1-E83C-B79A-6113BB62BFE3">
@@ -97,11 +97,11 @@
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <lineWidth>1</lineWidth>
 <points>
-<point x="1113" y="474"/>
+<point x="1118" y="474"/>
 <point x="1141" y="474"/>
 <point x="1142" y="556"/>
 <point x="998" y="555"/>
-<point x="998" y="530"/>
+<point x="998" y="549"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="AF0936A7-F7B0-837A-3424-698C5AC88276" otype="Relation" vid_source="0E2BDBB4-C7A1-E83C-B79A-6113BB62BFE3" vid_target="C50028F9-E975-5398-0E5E-2C6FF21FEE17">
@@ -116,8 +116,8 @@
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <lineWidth>1</lineWidth>
 <points>
-<point x="399" y="393"/>
-<point x="913" y="410"/>
+<point x="399" y="407"/>
+<point x="913" y="407"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="D14C0CA3-3F42-B00F-EC02-2E53B3CA5B0C" otype="Relation" vid_source="0E2BDBB4-C7A1-E83C-B79A-6113BB62BFE3" vid_target="C50028F9-E975-5398-0E5E-2C6FF21FEE17">
@@ -152,7 +152,7 @@
 <lineWidth>1</lineWidth>
 <points>
 <point x="913" y="357"/>
-<point x="804" y="353"/>
+<point x="804" y="357"/>
 </points>
 </Connector>
 </connectors>

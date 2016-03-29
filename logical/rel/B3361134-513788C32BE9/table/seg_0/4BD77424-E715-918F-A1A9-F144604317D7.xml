@@ -138,6 +138,18 @@
 <colAssociation fkAssociation="F0021433-1DF4-C76C-6F25-446A45FCB5F6" referredColumn="8042BA78-E75D-1686-C017-9D0E7F67CA4E"/>
 </associations>
 </Column>
+<Column name="type" id="81CB0C69-65B7-0649-3BEE-120157EC6FAA">
+<createdBy>Hudson</createdBy>
+<createdTime>2016-03-29 17:49:05 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="2E242ACE-F914-4F2A-C728-6EA63503F172" name="Project_PK">
