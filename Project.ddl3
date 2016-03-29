@@ -1,0 +1,220 @@
+DROP SEQUENCE Department_seq ; 
+create sequence Department_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger Department_PK_trig 
+before insert on Department
+for each row 
+begin 
+select Department_seq.nextval into :new.dept_no from dual; 
+end; 
+/
+alter table Department add created date ; 
+alter table Department add created_by VARCHAR2 (255) ; 
+alter table Department add row_version_number integer ; 
+alter table Department add updated date ; 
+alter table Department add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger Department_AUD_trig 
+before insert or update on Department 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE Parent_Child_seq ; 
+create sequence Parent_Child_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger Parent_Child_PK_trig 
+before insert on Parent_Child
+for each row 
+begin 
+select Parent_Child_seq.nextval into :new.parent_child_id from dual; 
+end; 
+/
+alter table Parent_Child add created date ; 
+alter table Parent_Child add created_by VARCHAR2 (255) ; 
+alter table Parent_Child add row_version_number integer ; 
+alter table Parent_Child add updated date ; 
+alter table Parent_Child add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger Parent_Child_AUD_trig 
+before insert or update on Parent_Child 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE Person_seq ; 
+create sequence Person_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger Person_PK_trig 
+before insert on Person
+for each row 
+begin 
+select Person_seq.nextval into :new.person_id from dual; 
+end; 
+/
+alter table Person add created date ; 
+alter table Person add created_by VARCHAR2 (255) ; 
+alter table Person add row_version_number integer ; 
+alter table Person add updated date ; 
+alter table Person add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger Person_AUD_trig 
+before insert or update on Person 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE Person_Project_seq ; 
+create sequence Person_Project_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger Person_Project_PK_trig 
+before insert on Person_Project
+for each row 
+begin 
+select Person_Project_seq.nextval into :new.person_project_id from dual; 
+end; 
+/
+alter table Person_Project add created date ; 
+alter table Person_Project add created_by VARCHAR2 (255) ; 
+alter table Person_Project add row_version_number integer ; 
+alter table Person_Project add updated date ; 
+alter table Person_Project add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger Person_Project_AUD_trig 
+before insert or update on Person_Project 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE Project_seq ; 
+create sequence Project_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger Project_PK_trig 
+before insert on Project
+for each row 
+begin 
+select Project_seq.nextval into :new.project_id from dual; 
+end; 
+/
+alter table Project add created date ; 
+alter table Project add created_by VARCHAR2 (255) ; 
+alter table Project add row_version_number integer ; 
+alter table Project add updated date ; 
+alter table Project add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger Project_AUD_trig 
+before insert or update on Project 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP INDEX child_FK_0 ;
+CREATE INDEX child_FK_0 ON Parent_Child(child) ;
+DROP INDEX parent_FK_1 ;
+CREATE INDEX parent_FK_1 ON Parent_Child(parent) ;
+DROP INDEX person_id_FK_2 ;
+CREATE INDEX person_id_FK_2 ON Person_Project(person_id) ;
+DROP INDEX project_id_FK_3 ;
+CREATE INDEX project_id_FK_3 ON Person_Project(project_id) ;
+DROP INDEX dept_no_FK_4 ;
+CREATE INDEX dept_no_FK_4 ON Person(dept_no) ;
+DROP INDEX spouse_FK_5 ;
+CREATE INDEX spouse_FK_5 ON Person(spouse) ;
+DROP INDEX manager_FK_6 ;
+CREATE INDEX manager_FK_6 ON Person(manager) ;
+DROP INDEX dept_no_FK_7 ;
+CREATE INDEX dept_no_FK_7 ON Project(dept_no) ;
+DROP INDEX manager_FK_8 ;
+CREATE INDEX manager_FK_8 ON Project(manager) ;
+DROP INDEX parent_project_FK_9 ;
+CREATE INDEX parent_project_FK_9 ON Project(parent_project) ;

@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="dept-no" id="C1285BF1-0E7C-851E-CCB6-ABE06A5EEF71">
+<Column name="dept_no" id="C1285BF1-0E7C-851E-CCB6-ABE06A5EEF71">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>3A4A3B0F-1C35-E96A-94FF-5DF1B4DDAB8A</generatorID>
@@ -19,7 +19,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="dept-name" id="D2859E72-993A-EF76-DEEB-AE13A5AF5A21">
+<Column name="dept_name" id="D2859E72-993A-EF76-DEEB-AE13A5AF5A21">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>5F366CC2-D9D0-BE93-A041-7614107634A1</generatorID>

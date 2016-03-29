@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="person-id" id="B7105277-D18F-CC22-16D1-029EF89878B9">
+<Column name="person_id" id="B7105277-D18F-CC22-16D1-029EF89878B9">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>A5530E34-0137-41FC-8A6A-DD73D7FF49D6</generatorID>
@@ -19,7 +19,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="first-name" id="63E900DE-9244-8909-B579-E9705CE33EDB">
+<Column name="first_name" id="63E900DE-9244-8909-B579-E9705CE33EDB">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>01CE7364-AE7D-31FE-9F98-671CB6FC2928</generatorID>
@@ -31,7 +31,7 @@
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="last-name" id="055C2607-0052-6D37-EC97-1794A995E4D9">
+<Column name="last_name" id="055C2607-0052-6D37-EC97-1794A995E4D9">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>30737404-B001-060D-5F6A-4C57757BABA4</generatorID>
@@ -109,7 +109,7 @@
 <colAssociation fkAssociation="7E8C07F4-0E4E-24B1-F3EF-4B30360BD5A0" referredColumn="B7105277-D18F-CC22-16D1-029EF89878B9"/>
 </associations>
 </Column>
-<Column name="employee-id" id="8A48395D-DD2D-EB57-D55C-7DF6B38D6159">
+<Column name="employee_id" id="8A48395D-DD2D-EB57-D55C-7DF6B38D6159">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>FFA185E3-80F5-0A22-69B6-E5A3DE284D17</generatorID>
@@ -133,7 +133,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="salary-exception" id="7BC1D88F-7E2E-64FE-2002-DA3B1401E896">
+<Column name="salary_exception" id="7BC1D88F-7E2E-64FE-2002-DA3B1401E896">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>3A6FBAA4-53AF-406D-0D1F-E54583A9ABAE</generatorID>
@@ -200,7 +200,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="dept-no" id="948B9F46-5625-19A4-BDF6-5B45879ECDF1">
+<Column name="dept_no" id="948B9F46-5625-19A4-BDF6-5B45879ECDF1">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>7F44F2CB-1707-C4F8-6805-62DCD2ED5C22</generatorID>
