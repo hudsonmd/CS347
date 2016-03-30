@@ -80,7 +80,7 @@ CREATE TABLE Project
     end_date_day     INTEGER ,
     end_date_year    INTEGER ,
     est_person_hours INTEGER ,
-    parent_project   INTEGER NOT NULL ,
+    parent_project   INTEGER ,
     type             VARCHAR2 (255)
   ) ;
 ALTER TABLE Project ADD CONSTRAINT Project_PK PRIMARY KEY ( project_id ) ;
