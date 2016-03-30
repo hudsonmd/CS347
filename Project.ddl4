@@ -7,7 +7,7 @@ drop view President_view ;
 drop view Current_Project_view ;
 drop view Previous_Project_view ;
 
-create view Previous_Employee_view as
+create view previous_employee_view as
 SELECT 
     person_id,
 	first_name,
@@ -55,7 +55,7 @@ BEGIN
 END;
 /
 
-create view Employee_view as
+create view employee_view as
 SELECT 
     person_id,
 	first_name,
@@ -109,7 +109,7 @@ BEGIN
 END;
 /
 
-create view Project_Employee_view as
+create view project_employee_view as
 SELECT 
     person_id,
 	first_name,
@@ -163,7 +163,7 @@ BEGIN
 END;
 /
 
-create view Manager_view as
+create view manager_view as
 SELECT 
     person_id,
 	first_name,
@@ -223,7 +223,7 @@ BEGIN
 END;
 /
 
-create view Interim_Manager_view as
+create view interim_manager_view as
 SELECT 
     person_id,
 	first_name,
@@ -283,7 +283,7 @@ BEGIN
 END;
 /
 
-create view President_view as
+create view president_view as
 SELECT 
     person_id,
 	first_name,
@@ -344,7 +344,7 @@ END;
 /
 
 
-create view Current_Project_view as
+create view current_project_view as
 SELECT 
     project_id,
 	manager,
@@ -380,7 +380,7 @@ BEGIN
 END;
 /
 
-create view Previous_Project_view as
+create view previous_project_view as
 SELECT 
     project_id,
 	manager,
