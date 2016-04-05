@@ -420,7 +420,7 @@ BEGIN
 		:NEW.dept_no,
 		:NEW.parent_project,
 		:NEW.project_active,
-		:NEW.end_date_month.
+		:NEW.end_date_month,
 		:NEW.end_date_day,
 		:NEW.end_date_year,
 		:NEW.est_person_hours,
