@@ -51,7 +51,7 @@ BEGIN
 		:NEW.spouse,
 		:NEW.IsFired,
 		:NEW.salary,
-        "Previous_Employee") ;
+        'Previous_Employee') ;
 END;
 /
 
@@ -105,7 +105,7 @@ BEGIN
 		:NEW.salary,
 		:NEW.salary_exception,
 		:NEW.manager,
-        "Employee") ;
+        'Employee') ;
 END;
 /
 
@@ -159,7 +159,7 @@ BEGIN
 		:NEW.salary,
 		:NEW.salary_exception,
 		:NEW.manager,
-        "Project_Employee") ;
+        'Project_Employee') ;
 END;
 /
 
@@ -219,7 +219,7 @@ BEGIN
 		:NEW.manager,
 		:NEW.bonus,
 		:NEW.dept_no,
-        "Manager") ;
+        'Manager') ;
 END;
 /
 
@@ -279,7 +279,7 @@ BEGIN
 		:NEW.manager,
 		:NEW.bonus,
 		:NEW.dept_no,
-        "Interim_Manager") ;
+        'Interim_Manager') ;
 END;
 /
 
@@ -339,7 +339,7 @@ BEGIN
 		:NEW.manager,
 		:NEW.bonus,
 		:NEW.dept_no,
-        "President") ;
+        'President') ;
 END;
 /
 
@@ -376,7 +376,7 @@ BEGIN
 		:NEW.dept_no,
 		:NEW.parent_project,
 		:NEW.project_active,
-        "Current_Project") ;
+        'Current_Project') ;
 END;
 /
 
@@ -424,6 +424,6 @@ BEGIN
 		:NEW.end_date_day,
 		:NEW.end_date_year,
 		:NEW.est_person_hours,
-        "Previous_Project") ;
+        'Previous_Project') ;
 END;
 /
