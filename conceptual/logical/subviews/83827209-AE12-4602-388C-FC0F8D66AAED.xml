@@ -41,7 +41,7 @@
 </OView>
 <OView class="oracle.dbtools.crest.swingui.TVNote" oid="2261FD48-F68F-8A02-FDC2-4FBCB8C3E6C4" otype="Note" vid="DD2F7BD4-167C-35FF-B6AA-A435F0C800EE">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="409" y="369" width="113" height="40"/>
+<bounds x="409" y="425" width="113" height="40"/>
 <comment>employee-manager</comment>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.TVNote" oid="232F384F-04B2-50FA-EB65-55E00AEAC740" otype="Note" vid="DE30A91D-3C51-FA42-CEFC-3F10E90A30BF">
@@ -51,7 +51,7 @@
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="2AB60DE3-062C-2BB4-53DA-769E652C38BF" otype="Entity" vid="3FCC234C-DFBE-3541-4CF4-5DCB5DBB2FE4">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="934" y="455" width="170" height="110"/>
+<bounds x="934" y="455" width="171" height="118"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="3B7499EB-C85A-7B1B-E28C-AC28C5819D49" otype="Entity" vid="AA021CB0-28CA-2662-0598-AFC7036C8D0A">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -100,7 +100,7 @@
 </OView>
 <OView class="oracle.dbtools.crest.swingui.TVNote" oid="EF27FA1B-1BFD-FC17-01FB-850F66263C7C" otype="Note" vid="422824A0-406B-95BC-A22A-8359B4197370">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="489" y="485" width="95" height="76"/>
+<bounds x="598" y="525" width="95" height="76"/>
 <comment>Interim-mgr is subclass of project-employee</comment>
 </OView>
 </objectViews>
@@ -155,7 +155,7 @@
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <lineWidth>1</lineWidth>
 <points>
-<point x="987" y="565"/>
+<point x="987" y="573"/>
 <point x="987" y="604"/>
 </points>
 </Connector>
@@ -203,19 +203,19 @@
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <lineWidth>1</lineWidth>
 <points>
-<point x="1104" y="510"/>
+<point x="1105" y="510"/>
 <point x="1129" y="510"/>
 <point x="1129" y="590"/>
 <point x="1019" y="590"/>
-<point x="1019" y="565"/>
+<point x="1019" y="573"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVInheritanceRelation" oid="A6B3F2A1-4768-FCAE-A981-D6B6218F8F67" otype="Hierarchy relation" vid_source="3FCC234C-DFBE-3541-4CF4-5DCB5DBB2FE4" vid_target="CBA1C22E-0C47-40E8-F50C-2382C07DA029">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <lineWidth>1</lineWidth>
 <points>
-<point x="1085" y="565"/>
-<point x="1085" y="604"/>
+<point x="1086" y="573"/>
+<point x="1086" y="604"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVInheritanceRelation" oid="C0B621B6-B2AC-8680-74BF-4233DE99556F" otype="Hierarchy relation" vid_source="0E2BDBB4-C7A1-E83C-B79A-6113BB62BFE3" vid_target="B471B34B-256D-24B5-28B8-BE9D7E11FACD">

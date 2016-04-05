@@ -1,11 +1,11 @@
-drop view Previous_Employee_view ;
-drop view Employee_view ;
-drop view Project_Employee_view ;
-drop view Manager_view ;
-drop view Interim_Manager_view ;
-drop view President_view ;
-drop view Current_Project_view ;
-drop view Previous_Project_view ;
+drop view previous_employee_view ;
+drop view employee_view ;
+drop view project_employee_view ;
+drop view manager_view ;
+drop view interim_manager_view ;
+drop view president_view ;
+drop view current_project_view ;
+drop view previous_project_view ;
 
 create view previous_employee_view as
 SELECT 

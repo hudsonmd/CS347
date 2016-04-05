@@ -69,7 +69,7 @@
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="home-phone" id="7754F705-6668-170E-E05D-1B4D14890AF0">
+<Column name="home_phone" id="7754F705-6668-170E-E05D-1B4D14890AF0">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>0A9DF784-7A91-FCDD-BE95-C7CC9220E547</generatorID>
@@ -81,7 +81,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="us-citizen" id="B988DBDC-72EF-50E1-E805-CADB9A00CF3F">
+<Column name="us_citizen" id="B988DBDC-72EF-50E1-E805-CADB9A00CF3F">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>6CC3A5D1-46FA-57DA-E4C5-4BFF84F8825F</generatorID>

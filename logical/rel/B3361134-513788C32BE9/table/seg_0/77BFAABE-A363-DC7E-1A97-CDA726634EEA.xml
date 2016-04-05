@@ -52,7 +52,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="B8B05F7C-D785-794B-FF6B-F83817DE3D18" name="Parent-Child_PK">
+<ind_PK_UK id="B8B05F7C-D785-794B-FF6B-F83817DE3D18" name="Parent_Child_PK">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>494AAF66-0B65-CE82-090A-E8C4DF99E8DF</generatorID>
@@ -64,7 +64,7 @@
 <colUsage columnID="054DF99E-4039-349A-154B-4D2541FC37F4"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="4A893D7E-6E34-F823-799C-14F65D0C50B3" name="Parent-Child_Person_FK">
+<ind_PK_UK id="4A893D7E-6E34-F823-799C-14F65D0C50B3" name="Parent_Child_Person_FK">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>AF0936A7-F7B0-837A-3424-698C5AC88276</generatorID>
@@ -75,7 +75,7 @@
 <colUsage columnID="46EF4223-20CD-9729-E0EB-53A578ADD9C6"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="290F8B92-EEEB-CCA0-6DDE-C10D77EBD8C4" name="Parent-Child_Person_FKv1">
+<ind_PK_UK id="290F8B92-EEEB-CCA0-6DDE-C10D77EBD8C4" name="Parent_Child_Person_FKv1">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>D14C0CA3-3F42-B00F-EC02-2E53B3CA5B0C</generatorID>

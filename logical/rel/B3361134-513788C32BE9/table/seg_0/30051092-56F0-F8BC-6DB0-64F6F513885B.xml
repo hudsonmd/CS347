@@ -52,7 +52,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="5C2F8C43-43E2-F000-26E0-020A07EBB6AB" name="Person-Project_PK">
+<ind_PK_UK id="5C2F8C43-43E2-F000-26E0-020A07EBB6AB" name="Person_Project_PK">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>0C690546-D5E9-4E98-786B-270A57A91052</generatorID>
@@ -64,7 +64,7 @@
 <colUsage columnID="05D44DD7-53ED-989A-7269-983154C5DE1B"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="43EAEB06-A328-D68B-730A-E34D4A567A14" name="Person-Project_Person_FK">
+<ind_PK_UK id="43EAEB06-A328-D68B-730A-E34D4A567A14" name="Person_Project_Person_FK">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>ED7499D0-EE44-0B46-92F9-D74771364937</generatorID>
@@ -75,7 +75,7 @@
 <colUsage columnID="C7F9901B-BDCF-8CDD-1A6C-FF4A8296274D"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="201E75E6-714D-3FE4-EF21-04731223B7B0" name="Person-Project_Project_FK">
+<ind_PK_UK id="201E75E6-714D-3FE4-EF21-04731223B7B0" name="Person_Project_Project_FK">
 <createdBy>Hudson</createdBy>
 <createdTime>2016-03-28 17:47:43 UTC</createdTime>
 <generatorID>F59EAE51-1380-799A-5728-3A2800EFBA11</generatorID>
