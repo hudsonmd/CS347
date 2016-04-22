@@ -6,6 +6,7 @@ drop view interim_manager_view ;
 drop view president_view ;
 drop view current_project_view ;
 drop view previous_project_view ;
+drop view proposed_project_view ;
 
 create view previous_employee_view as
 SELECT 
@@ -425,5 +426,39 @@ BEGIN
 		:NEW.end_date_year,
 		:NEW.est_person_hours,
         'Previous_Project') ;
+END;
+/
+
+
+create view proposed_project_view as
+SELECT 
+    project_id,
+	manager,
+	project_title,
+	dept_no,
+	parent_project,
+	type
+
+FROM Project where type = 'Proposed_Project' ;
+
+create or replace TRIGGER current_project_trigger
+     INSTEAD OF insert ON current_project_view
+     FOR EACH ROW
+BEGIN
+    insert into Project( 
+		project_id,
+		manager,
+		project_title,
+		dept_no,
+		parent_project,
+		type
+		)
+		 VALUES ( 
+		:NEW.project_id,
+		:NEW.manager,
+		:NEW.project_title,
+		:NEW.dept_no,
+		:NEW.parent_project,
+        'Proposed_Project') ;
 END;
 /
