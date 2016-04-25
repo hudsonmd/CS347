@@ -1,0 +1,10 @@
+Person
+P16_REST_RESULTS
+person_id
+first_name
+last_name
+home_address
+zipcode
+home_phone
+us_citizen
+
