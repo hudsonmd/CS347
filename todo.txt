@@ -1,0 +1,29 @@
+Michael
+
+1. President can approve or reject projects
+	1b.manager can view rejected
+	1c. change oracle models
+	1d. change modes in apex
+2.dml file insert statements to populate project 1 (disable constraints)
+6. export part 1
+
+-------------------------------------------------------------------
+Matthew 
+3.add rejected project to part 2 sim (create class and insert example) Rejected_project comments
+10. discuss dif. b/t relational and sim application
+9. update git repo link piazza
+7. readme with urls to both parts
+-------------------------------------------------------------------
+Both
+
+4.create part 2 apex
+	1b. nav entries for each object viewable on permission with reports
+	1c. if viewable add employees and projects
+	1d. project approval workflow
+
+
+---------------------------
+wednesday morningish
+5.create powerpoint
+8. screenshots of both apps
+
