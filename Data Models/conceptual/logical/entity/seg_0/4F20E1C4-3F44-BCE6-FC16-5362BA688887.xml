@@ -13,7 +13,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="comment" id="60A0FCC2-C61A-0F41-DB3B-8088A0F54C79">
+<Attribute name="comments" id="60A0FCC2-C61A-0F41-DB3B-8088A0F54C79">
 <createdBy>mccrorym</createdBy>
 <createdTime>2016-04-25 23:46:51 UTC</createdTime>
 <ownerDesignName>conceptual</ownerDesignName>

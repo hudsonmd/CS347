@@ -163,7 +163,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="comment" id="E96C9088-6978-8715-1FAC-76E8C7841B33">
+<Attribute name="comments" id="E96C9088-6978-8715-1FAC-76E8C7841B33">
 <createdBy>mccrorym</createdBy>
 <createdTime>2016-04-25 23:49:24 UTC</createdTime>
 <ownerDesignName>logical</ownerDesignName>
