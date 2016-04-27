@@ -17,7 +17,6 @@ alter table Person disable constraint Person_Department_FK;
 alter table Person disable constraint Person_Person_FK;
 alter table Person disable constraint Person_Person_FKv1;
 alter table Person_Project disable constraint Person_Project_Person_FK;
-alter table Person_Project disable constraint Person_Project_Project_FK;
 alter table Project disable constraint Project_Department_FK;
 alter table Project disable constraint Project_Person_FK;
 alter table Project disable constraint Project_Project_FK;
@@ -147,9 +146,7 @@ alter table Person enable constraint Person_Department_FK;
 alter table Person enable constraint Person_Person_FK;
 alter table Person enable constraint Person_Person_FKv1;
 alter table Person_Project enable constraint Person_Project_Person_FK;
-alter table Person_Project enable constraint Person_Project_Project_FK;
 alter table Project enable constraint Project_Department_FK;
 alter table Project enable constraint Project_Person_FK;
-alter table Project enable constraint Project_Project_FK;
 
 
