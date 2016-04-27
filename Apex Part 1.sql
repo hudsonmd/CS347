@@ -27,8 +27,8 @@ prompt APPLICATION 97138 - MH_MM_Project
 -- Application Export:
 --   Application:     97138
 --   Name:            MH_MM_Project
---   Date and Time:   17:15 Wednesday April 27, 2016
---   Exported By:     HUDSONMD
+--   Date and Time:   21:10 Wednesday April 27, 2016
+--   Exported By:     MICHAELMCCRORY@UTEXAS.EDU
 --   Flashback:       0
 --   Export Type:     Application Export
 --   Version:         5.0.3.00.03
@@ -113,7 +113,7 @@ wwv_flow_api.create_flow(
 ,p_csv_encoding=>'Y'
 ,p_auto_time_zone=>'N'
 ,p_last_updated_by=>'MICHAELMCCRORY@UTEXAS.EDU'
-,p_last_upd_yyyymmddhh24miss=>'20160427165806'
+,p_last_upd_yyyymmddhh24miss=>'20160427171835'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_ui_type_name => null
 );
@@ -8654,8 +8654,8 @@ wwv_flow_api.create_page(
 ,p_page_is_public_y_n=>'N'
 ,p_protection_level=>'D'
 ,p_cache_mode=>'NOCACHE'
-,p_last_updated_by=>'HUDSONMD'
-,p_last_upd_yyyymmddhh24miss=>'20160421231543'
+,p_last_updated_by=>'MICHAELMCCRORY@UTEXAS.EDU'
+,p_last_upd_yyyymmddhh24miss=>'20160427171835'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(25224637106437117539)
@@ -8687,10 +8687,17 @@ wwv_flow_api.create_page_item(
 ,p_name=>'P0_USERID'
 ,p_item_sequence=>20
 ,p_item_plug_id=>wwv_flow_api.id(25224637106437117539)
-,p_prompt=>'User Id'
+,p_prompt=>'User ID'
 ,p_display_as=>'NATIVE_DISPLAY_ONLY'
+,p_named_lov=>'PERSON'
+,p_lov=>wwv_flow_utilities.join(wwv_flow_t_varchar2(
+'select first_name || '' '' || last_name as d,',
+'       person_id as r',
+'  from person',
+' order by 1'))
 ,p_field_template=>wwv_flow_api.id(28966897749615935710)
 ,p_item_template_options=>'#DEFAULT#'
+,p_lov_display_extra=>'YES'
 ,p_attribute_01=>'Y'
 ,p_attribute_02=>'VALUE'
 ,p_attribute_04=>'Y'
