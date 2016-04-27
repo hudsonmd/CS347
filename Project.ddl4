@@ -442,8 +442,8 @@ SELECT
 
 FROM Project where type = 'Proposed_Project' ;
 
-create or replace TRIGGER current_project_trigger
-     INSTEAD OF insert ON current_project_view
+create or replace TRIGGER proposed_project_trigger
+     INSTEAD OF insert ON proposed_project_view
      FOR EACH ROW
 BEGIN
     insert into Project( 
@@ -471,12 +471,13 @@ SELECT
 	project_title,
 	dept_no,
 	parent_project,
-	type
+	type,
+	comments
 
 FROM Project where type = 'Rejected_Project' ;
 
-create or replace TRIGGER current_project_trigger
-     INSTEAD OF insert ON current_project_view
+create or replace TRIGGER rejected_project_trigger
+     INSTEAD OF insert ON rejected_project_view
      FOR EACH ROW
 BEGIN
     insert into Project( 
@@ -486,7 +487,7 @@ BEGIN
 		dept_no,
 		parent_project,
 		type,
-		comment
+		comments
 		)
 		 VALUES ( 
 		:NEW.project_id,
@@ -495,6 +496,6 @@ BEGIN
 		:NEW.dept_no,
 		:NEW.parent_project,
         'Rejected_Project',
-        :NEW.comment) ;
+        :NEW.comments) ;
 END;
 /
