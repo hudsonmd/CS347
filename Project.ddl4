@@ -7,6 +7,7 @@ drop view president_view ;
 drop view current_project_view ;
 drop view previous_project_view ;
 drop view proposed_project_view ;
+drop view rejected_project_view ;
 
 create view previous_employee_view as
 SELECT 
@@ -460,5 +461,40 @@ BEGIN
 		:NEW.dept_no,
 		:NEW.parent_project,
         'Proposed_Project') ;
+END;
+/
+
+create view rejected_project_view as
+SELECT 
+    project_id,
+	manager,
+	project_title,
+	dept_no,
+	parent_project,
+	type
+
+FROM Project where type = 'Rejected_Project' ;
+
+create or replace TRIGGER current_project_trigger
+     INSTEAD OF insert ON current_project_view
+     FOR EACH ROW
+BEGIN
+    insert into Project( 
+		project_id,
+		manager,
+		project_title,
+		dept_no,
+		parent_project,
+		type,
+		comment
+		)
+		 VALUES ( 
+		:NEW.project_id,
+		:NEW.manager,
+		:NEW.project_title,
+		:NEW.dept_no,
+		:NEW.parent_project,
+        'Rejected_Project',
+        :NEW.comment) ;
 END;
 /
