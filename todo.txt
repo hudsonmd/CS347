@@ -9,10 +9,7 @@ Michael
 
 -------------------------------------------------------------------
 Matthew 
-3.add rejected project to part 2 sim (create class and insert example) Rejected_project comments
-10. discuss dif. b/t relational and sim application
-9. update git repo link piazza
-7. readme with urls to both parts
+
 -------------------------------------------------------------------
 Both
 
@@ -26,4 +23,5 @@ Both
 wednesday morningish
 5.create powerpoint
 8. screenshots of both apps
+10. discuss dif. b/t relational and sim application
 

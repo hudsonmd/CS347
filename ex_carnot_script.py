@@ -56,3 +56,16 @@ j0.rid=j1.rid and j1.rid = j2.rid and j2.rid = j3.rid and j3.rid = j4.rid and j1
 
 
 select * from person;
+
+var val = 4;
+var userType = $v('P31_USERNAME');
+if (userType=="President")
+    val=8;
+if (userType=="Manager" or userType=="Interim_Manager")
+    val=1;
+if (userType=="Project_Employee")
+    val=7;
+if (userType=="Employee")
+    val=5;
+
+$s("P0_USERID", val);

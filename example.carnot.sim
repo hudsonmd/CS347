@@ -114,6 +114,8 @@ SIM on connOracleNoSQL 'INSERT Project( project-no:= 703 ,project-title := "Dese
 SIM on connOracleNoSQL 'INSERT Project( project-no:= 704 ,project-title := "Hallo");'
 SIM on connOracleNoSQL 'INSERT Project( project-no:= 705 ,project-title := "Stick And Fly");'
 SIM on connOracleNoSQL 'INSERT Project( project-no:= 706 ,project-title := "Night Rider");'
+SIM on connOracleNoSQL 'INSERT Project( project-no:= 707 ,project-title := "V for Vendetta");'
+SIM on connOracleNoSQL 'INSERT Project( project-no:= 708 ,project-title := "Super Troopers");'
 
 # Current-Project
 SIM on connOracleNoSQL '''SUBCLASS Current-Project "Projects currently in progress" OF
@@ -126,6 +128,21 @@ SIM on connOracleNoSQL 'INSERT Current-Project FROM Project WHERE project-title 
 SIM on connOracleNoSQL 'INSERT Current-Project FROM Project WHERE project-title = "Hallo"( project-active := FALSE );'
 SIM on connOracleNoSQL 'INSERT Current-Project FROM Project WHERE project-title = "Stick And Fly"( project-active := TRUE );'
 SIM on connOracleNoSQL 'INSERT Current-Project FROM Project WHERE project-title = "Night Rider"( project-active := TRUE );'
+
+# Proposed-Project
+SIM on connOracleNoSQL '''SUBCLASS Proposed-Project "Projects pending approval" OF
+Project
+(
+);'''
+SIM on connOracleNoSQL 'INSERT Proposed-Project FROM Project WHERE project-title = "Super Troopers"();'
+
+# Rejected-Project
+SIM on connOracleNoSQL '''SUBCLASS Rejected-Project "Projects rejected by the president" OF
+Project
+(
+    comments "Why is was rejected" : STRING [30], REQUIRED;
+);'''
+SIM on connOracleNoSQL 'INSERT Rejected-Project FROM Project WHERE project-title = "V for Vendetta"( comments := "Way too amazing" );'
 
 # Previous-Project
 SIM on connOracleNoSQL '''SUBCLASS Previous-Project "Completed Projects" OF Project
@@ -162,7 +179,7 @@ SIM on connOracleNoSQL 'MODIFY LIMIT = ALL Employee ( employee-manager := Manage
 SIM on connOracleNoSQL 'MODIFY LIMIT = ALL Project-Employee( current-projects := INCLUDE Current-Project WITH ( project-title = "Mission Impossible" )) WHERE person-id = 7 OR person-id = 3 OR person-id = 2 OR employee-id = 106 OR person-id = 1;'
 SIM on connOracleNoSQL 'MODIFY LIMIT = ALL Project-Employee( current-projects := INCLUDE Current-Project WITH ( project-title = "Stick And Fly" )) WHERE person-id = 3 OR person-id = 7 OR person-id = 106;'
 SIM on connOracleNoSQL 'MODIFY LIMIT = ALL Project-Employee( current-projects := INCLUDE Current-Project WITH ( project-title = "Night Rider" )) WHERE person-id = 2 OR person-id = 1 OR person-id = 7;'
-SIM on connOracleNoSQL 'MODIFY Manager (projects-managing := INCLUDE Project WITH( project-title = "Mission Impossible" OR project-title = "Night Rider"), manager-dept := Department WITH ( dept-name = "Sales" )) WHERE employee-id = 101;'
+SIM on connOracleNoSQL 'MODIFY Manager (projects-managing := INCLUDE Project WITH( project-title = "Mission Impossible" OR project-title = "Night Rider" OR project-title="V for Vendetta" OR project-title="Super Troopers"), manager-dept := Department WITH ( dept-name = "Sales" )) WHERE employee-id = 101;'
 SIM on connOracleNoSQL 'MODIFY Manager (projects-managing := INCLUDE Project WITH( project-title = "Stick And Fly" OR project-title = "Code Red" OR project-title = "Desert Rose" OR project-title = "Hallo"), manager-dept := Department WITH ( dept-name = "R&D")) WHERE employee-id = 107;'
 SIM on connOracleNoSQL 'MODIFY Manager (manager-dept := Department WITH ( dept-name = "Sales")) WHERE employee-id = 108;'
 SIM on connOracleNoSQL 'MODIFY Department ( project-at := INCLUDE Project WITH ( project-title = "Mission Impossible" OR project-title = "Night Rider")) WHERE dept-name = "Sales";'

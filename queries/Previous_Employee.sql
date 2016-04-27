@@ -5,7 +5,7 @@ j3.home_address,
 j4.zipcode,
 j5.home_phone,
 j6.us_citizen,
-j7.isFired,
+j7.isfired,
 j8.salary
 from apex_collections c,
 json_table(c.clob001, '$.person_id[*]' COLUMNS rid for ordinality, person_id varchar2(30) path '$') j0 ,
@@ -15,9 +15,9 @@ json_table(c.clob001, '$.home_address[*]' COLUMNS rid for ordinality, home_addre
 json_table(c.clob001, '$.zipcode[*]' COLUMNS rid for ordinality, zipcode varchar2(30) path '$') j4 ,
 json_table(c.clob001, '$.home_phone[*]' COLUMNS rid for ordinality, home_phone varchar2(30) path '$') j5 ,
 json_table(c.clob001, '$.us_citizen[*]' COLUMNS rid for ordinality, us_citizen varchar2(30) path '$') j6 ,
-json_table(c.clob001, '$.isFired[*]' COLUMNS rid for ordinality, isFired varchar2(30) path '$') j7 ,
+json_table(c.clob001, '$.isfired[*]' COLUMNS rid for ordinality, isfired varchar2(30) path '$') j7 ,
 json_table(c.clob001, '$.salary[*]' COLUMNS rid for ordinality, salary varchar2(30) path '$') j8 
-where c.collection_name='P16_REST_RESULTS'  and 
+where c.collection_name='P5_REST_RESULTS'  and 
  j0.rid=j0.rid and 
  j0.rid=j1.rid and 
  j0.rid=j2.rid and 
