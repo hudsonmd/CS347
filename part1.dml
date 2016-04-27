@@ -1,0 +1,155 @@
+--disable triggers
+alter trigger Department_PK_trig disable;
+alter trigger Parent_Child_PK_trig disable;
+alter trigger Person_PK_trig disable;
+alter trigger Person_Project_PK_trig disable;
+alter trigger Project_PK_trig disable;
+alter trigger Department_AUD_trig disable;
+alter trigger Parent_Child_AUD_trig disable;
+alter trigger Person_AUD_trig disable;
+alter trigger Person_Project_AUD_trig disable;
+alter trigger Project_AUD_trig disable;
+
+-- disable FK constraints
+alter table Parent_Child disable constraint Parent_Child_Person_FK;
+alter table Parent_Child disable constraint Parent_Child_Person_FKv1;
+alter table Person disable constraint Person_Department_FK;
+alter table Person disable constraint Person_Person_FK;
+alter table Person disable constraint Person_Person_FKv1;
+alter table Person_Project disable constraint Person_Project_Person_FK;
+alter table Person_Project disable constraint Person_Project_Project_FK;
+alter table Project disable constraint Project_Department_FK;
+alter table Project disable constraint Project_Person_FK;
+alter table Project disable constraint Project_Project_FK;
+
+--Truncate tables
+truncate table Person;
+truncate table Parent_Child;
+truncate table Person_Project;
+truncate table Department;
+truncate table Project;
+
+--insert employees
+insert into Person(person_id, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse, employee_id, salary, salary_exception, IsFired, manager, type)
+	values(1, 'Michael', 'Jackson', '2323 Main Street', '78705', 2145663856, 1, 2, 100, 60000, 0, 0, 10, 'Employee');
+
+insert into Person(person_id, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse, employee_id, salary, salary_exception, IsFired, manager, type)
+	values(2, 'Julie', 'Jackson', '2323 Main Street', '78705', 2145663856, 1, 1, 101, 65000, 0, 0, 11, 'Employee');
+
+insert into Person(person_id, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse, employee_id, salary, salary_exception, IsFired, manager, type)
+	values(3, 'Jack', 'Robinson', '2323 Elm Street', '78755', 5127864643, 0, null, 102, 55000, 0, 0, 10, 'Employee');
+
+--insert project employees
+insert into Person(person_id, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse, employee_id, salary, salary_exception, IsFired, manager, type)
+	values(4, 'George', 'Washington', '1234 24th Street', '78890', 5127876235, 1, null, 103, 70000, 0, 0, 11, 'Project_Employee');
+
+insert into Person(person_id, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse, employee_id, salary, salary_exception, IsFired, manager, type)
+	values(5, 'William', 'Nelson', '9090 Apple Road', '98765', 2145854976, 1, null, 104, 71000, 0, 0, 11, 'Project_Employee');
+
+insert into Person(person_id, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse, employee_id, salary, salary_exception, IsFired, manager, type)
+	values(6, 'Anthony', 'Spencer', '3927 Spears Drive', '37356', 9726544829, 1, null, 105, 68000, 0, 0, 10, 'Project_Employee');
+
+insert into Person(person_id, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse, employee_id, salary, salary_exception, IsFired, manager, type)
+	values(7, 'Larry', 'David', '6723 Daria Drive', '36298', 4147652740, 1, null, 106, 75000, 0, 0, 10, 'Project_Employee');
+
+insert into Person(person_id, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse, employee_id, salary, salary_exception, IsFired, manager, type)
+	values(8, 'Travis', 'Hawking', '4342 Alta Vista', '75229', 2144899024, 1, null, 1010, 74000, 0, 0, 12, 'Project_Employee');
+
+-- insert managers
+insert into Person(person_id, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse, employee_id, salary, salary_exception, IsFired, manager, type, bonus, dept_no)
+	values(10, 'Lebron', 'James', '4836 Wilshire Road', '34300', 3987448900, 1, null, 107, 80000, 0, 0, null, 'Manager', 4700, 1);
+
+insert into Person(person_id, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse, employee_id, salary, salary_exception, IsFired, manager, type, bonus, dept_no)
+	values(11, 'Niko', 'Jewett', '3434 Salado Street', '78734', 512329995, 1, null, 108, 82500, 0, 0, null, 'Manager', 4000, 2);
+
+-- insert interim manager
+insert into Person(person_id, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse, employee_id, salary, salary_exception, IsFired, manager, type, bonus, dept_no)
+	values(12, 'Mike', 'Jones', '3947 Pearl Street', '78705', 5124839948, 1, null, 109, 71500, 0, 0, null, 'Interim_Manager', 2500, 3);
+
+-- insert previous employee
+insert into Person(person_id, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse, salary, IsFired, type)
+	values(9, 'Bob', 'Berry', '1400 Rio Street', '78700', 4329874923, 1, null, 58000, 1,  'Previous_Employee');
+
+-- insert president
+insert into Person(person_id, first_name, last_name, home_address, zipcode, home_phone, us_citizen, spouse, employee_id, salary, salary_exception, IsFired, manager, bonus, type)
+	values(13, 'Jerry', 'Jones', '1387 Mansion Street', '75225', 9725659973, 1, null, 112, 150000, 0, 0, null, 10000, 'President');
+
+-- insert current projects
+insert into Project(manager, project_id, project_title, dept_no, project_active, type)
+	values(10, 1, 'Complete Admin Tasks', 1, 1, 'Current_Project');
+
+insert into Project(manager, project_id, project_title, dept_no, parent_project, project_active, type)
+	values(10, 2, 'Build Website', 1, 1, 1, 'Current_Project');	
+
+insert into Project(manager, project_id, project_title, dept_no, project_active, type)
+	values(11, 3, 'Fix Apex Application', 2, 1, 'Current_Project');
+
+insert into Project(manager, project_id, project_title, dept_no, project_active, type)
+	values(12, 4, 'Repaint Office Walls', 3, 1, 'Current_Project');
+
+-- insert proposed_project
+insert into Project(manager, project_id, project_title, dept_no, type)
+	values(11, 5, 'Create Mobile App', 2, 'Proposed_Project');
+
+-- insert Previous_Project
+insert into Project(manager, project_id, project_title, dept_no, parent_project, end_date_month, end_date_day, end_date_year, est_person_hours, type)
+	values(10, 6, 'Hire Employees', 1, 0, 12, 15, 2014, 200, 'Previous_Project');
+
+-- insert Rejected_project
+insert into Project(manager, project_id, project_title, dept_no, parent_project, comments, type)
+	values(12, 7, 'Recarpet Offices', 3, 0, 'I like the carpets just the way they are.', 'Rejected_Project');
+
+-- insert departments
+insert into Department(dept_no, dept_name)
+	values(1, 'Administration');
+
+insert into Department(dept_no, dept_name)
+	values(2, 'Engineering');
+
+insert into Department(dept_no, dept_name)
+	values(3, 'Custodial');
+
+-- insert person_projects
+insert into Person_Project(person_project_id, person_id, project_id)
+	values(1, 6, 1);
+
+insert into Person_Project(person_project_id, person_id, project_id)
+	values(2, 6, 2);
+
+insert into Person_Project(person_project_id, person_id, project_id)
+	values(3, 7, 1);
+
+insert into Person_Project(person_project_id, person_id, project_id)
+	values(4, 4, 3);
+
+insert into Person_Project(person_project_id, person_id, project_id)
+	values(5, 5, 3);
+
+insert into Person_Project(person_project_id, person_id, project_id)
+	values(6, 8, 4);
+
+-- Enable Triggers
+alter trigger Department_PK_trig enable;
+alter trigger Parent_Child_PK_trig enable;
+alter trigger Person_PK_trig enable;
+alter trigger Person_Project_PK_trig enable;
+alter trigger Project_PK_trig enable;
+alter trigger Department_AUD_trig enable;
+alter trigger Parent_Child_AUD_trig enable;
+alter trigger Person_AUD_trig enable;
+alter trigger Person_Project_AUD_trig enable;
+alter trigger Project_AUD_trig enable;
+
+-- Enable FK constraints
+alter table Parent_Child enable constraint Parent_Child_Person_FK;
+alter table Parent_Child enable constraint Parent_Child_Person_FKv1;
+alter table Person enable constraint Person_Department_FK;
+alter table Person enable constraint Person_Person_FK;
+alter table Person enable constraint Person_Person_FKv1;
+alter table Person_Project enable constraint Person_Project_Person_FK;
+alter table Person_Project enable constraint Person_Project_Project_FK;
+alter table Project enable constraint Project_Department_FK;
+alter table Project enable constraint Project_Person_FK;
+alter table Project enable constraint Project_Project_FK;
+
+
